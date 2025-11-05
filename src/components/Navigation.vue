@@ -3,7 +3,7 @@
 
 <template>
   <!--
-  Die "buttons" (eigentlich links) nutzen wir zur navigation zu verschiedenen
+  Die "buttons" (eigentlich hyperlinks) nutzen wir zur navigation zu verschiedenen
   Unterseiten
   -->
   <nav>
