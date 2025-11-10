@@ -1,7 +1,4 @@
 <script setup lang="ts">
-// respects the base url of the repo
-const baseUrl = import.meta.env.BASE_URL;
-console.log(baseUrl);
 </script>
 
 <template>
@@ -10,8 +7,8 @@ console.log(baseUrl);
   Unterseiten
   -->
   <nav>
-    <a :href="`${baseUrl}index.html`">Svg to svg converter</a>
-    <a :href="`${baseUrl}`">Patricks lustige idee</a>
+    <a href="index.html">Svg to svg converter</a>
+    <a href="/">Patricks lustige idee</a>
   </nav>
 </template>
 

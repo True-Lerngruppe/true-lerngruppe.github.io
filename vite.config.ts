@@ -21,5 +21,5 @@ export default defineConfig({
   // is actually at "https://true-lerngruppe.github.io/vue_app"
   // so we need to set this to "vue_app".
   // If renaming the repo, CHANGE this
-  base: '/vue_app/',
+  //base: '/vue_app/',
 })
