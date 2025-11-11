@@ -18,8 +18,14 @@ const buttonWidth = ref(150);
 const animationDuration = computed(() => {
   if (count.value < crazyCount.value) return '0.5s';
 
-  const speedFactor = Math.max(0.1, 0.5 - (count.value - crazyCount.value) * 0.01);
+  const speedFactor = Math.max(0.05, 0.5 - (count.value - crazyCount.value) * 0.02);
   return `${speedFactor}s`;
+})
+
+const currentVelocity = computed(() => {
+  if (count.value < crazyCount.value) return 2;
+
+  return 2 + (count.value - crazyCount.value) * 1.5;
 })
 
 const buttonScale = computed(() => {
@@ -34,8 +40,8 @@ onMounted(() => {
   const animate = () => {
     if (count.value >= crazyCount.value) {
 
-      posX.value += velX.value
-      posY.value += velY.value
+      posX.value += velX.value * (currentVelocity.value / 2)
+      posY.value += velY.value * (currentVelocity.value / 2)
 
       const maxBounds = {
         x: window.innerWidth - buttonWidth.value,
@@ -101,87 +107,87 @@ button {
 
 @keyframes funkyDance {
   0% {
-    transform: scale(1.2) rotate(0deg);
+    transform: rotate(0deg);
   }
 
   5% {
-    transform: scale(1.3) rotate(18deg);
+    transform: rotate(18deg);
   }
 
   10% {
-    transform: scale(1.25) rotate(36deg);
+    transform: rotate(36deg);
   }
 
   15% {
-    transform: scale(1.35) rotate(54deg);
+    transform: rotate(54deg);
   }
 
   20% {
-    transform: scale(1.28) rotate(72deg);
+    transform: rotate(72deg);
   }
 
   25% {
-    transform: scale(1.4) rotate(90deg);
+    transform: rotate(90deg);
   }
 
   30% {
-    transform: scale(1.32) rotate(108deg);
+    transform: rotate(108deg);
   }
 
   35% {
-    transform: scale(1.38) rotate(126deg);
+    transform: rotate(126deg);
   }
 
   40% {
-    transform: scale(1.3) rotate(144deg);
+    transform: rotate(144deg);
   }
 
   45% {
-    transform: scale(1.35) rotate(162deg);
+    transform: rotate(162deg);
   }
 
   50% {
-    transform: scale(1.25) rotate(180deg);
+    transform: rotate(180deg);
   }
 
   55% {
-    transform: scale(1.38) rotate(198deg);
+    transform: rotate(198deg);
   }
 
   60% {
-    transform: scale(1.3) rotate(216deg);
+    transform: rotate(216deg);
   }
 
   65% {
-    transform: scale(1.35) rotate(234deg);
+    transform: rotate(234deg);
   }
 
   70% {
-    transform: scale(1.28) rotate(252deg);
+    transform: rotate(252deg);
   }
 
   75% {
-    transform: scale(1.4) rotate(270deg);
+    transform: rotate(270deg);
   }
 
   80% {
-    transform: scale(1.32) rotate(288deg);
+    transform: rotate(288deg);
   }
 
   85% {
-    transform: scale(1.38) rotate(306deg);
+    transform: rotate(306deg);
   }
 
   90% {
-    transform: scale(1.3) rotate(324deg);
+    transform: rotate(324deg);
   }
 
   95% {
-    transform: scale(1.35) rotate(342deg);
+    transform: rotate(342deg);
   }
 
   100% {
-    transform: scale(1.2) rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 </style>
