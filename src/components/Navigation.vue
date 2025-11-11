@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 
+const nav_bar_id = ref("nav-bar");
 
 function shuffleLinks()
 {
-  const bar = document.getElementById("nav-bar");
+  const bar = document.getElementById(nav_bar_id.value);
   if(!bar) return;
 
   for (let i = bar.children.length; i >= 0; i--) {
@@ -25,7 +26,7 @@ onMounted(() => {
   Die "buttons" (eigentlich hyperlinks) nutzen wir zur navigation zu verschiedenen
   Unterseiten
   -->
-  <nav id="nav-bar">
+  <nav :id="nav_bar_id">
     <a href="index.html">Svg to svg converter</a>
     <a href="/">Patricks lustige idee</a>
   </nav>
