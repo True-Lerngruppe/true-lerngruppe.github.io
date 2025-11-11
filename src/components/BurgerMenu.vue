@@ -29,6 +29,7 @@ function shuffleMenuItems() {
 
 watch(() => route.path, () => {
   closeMenu();
+  shuffleMenuItems();
 });
 
 onMounted(() => {
