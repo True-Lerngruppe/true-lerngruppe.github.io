@@ -10,6 +10,7 @@ import BurgerMenu from './components/BurgerMenu.vue'
 <template>
   <BurgerMenu>
     <RouterLink to="/svg_converter">Svg to svg converter</RouterLink>
+    <RouterLink to="/impressum">Impressum</RouterLink>
     <RouterLink to="/">Patricks lustige idee</RouterLink>
   </BurgerMenu>
 
