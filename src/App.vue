@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { RouterLink } from 'vue-router';
 import BurgerMenu from './components/BurgerMenu.vue'
 </script>
 
@@ -9,6 +10,7 @@ import BurgerMenu from './components/BurgerMenu.vue'
     <RouterLink to="/impressum">Impressum</RouterLink>
     <RouterLink to="/funny_something">Patricks lustige idee</RouterLink>
     <RouterLink to="/trippy">Go for a trip</RouterLink>
+    <RouterLink to="/escape_room">Escape Room</RouterLink>
   </BurgerMenu>
 
   <main>
