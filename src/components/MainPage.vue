@@ -16,7 +16,7 @@
       Bouncy Button
     </h2>
     <p>
-      This Button will keep you on your toes! Don't 69 it!
+      This Button will keep you on your toes! No funny <s>stuff</s> number.
     </p>
     <h2>
       Impressum
