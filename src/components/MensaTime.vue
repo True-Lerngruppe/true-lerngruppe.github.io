@@ -32,7 +32,7 @@ Yeah, triff mich in der Stadt, Homie, ja ich gebe Geld aus
 Guck mal wie ich meiner Lady einen schönen Held kauf'
 Rotfuchs, Silberfuchs, kuschelweiches Fell
 Und danach fick ich kurz mit einer Nutte im Hotel
-Yeah, PRPS, Bitches finden mеine Rosen fresh
+Yeah, PRPS, Schnitzel finden mеine Rosen fresh
 Ich hab dеn Mensa Swag, grüner Schal, rote Cap
 Es ist Mensatime, Party jede Nacht, Slime
 Und zwar die ganze Nacht, wir gehen erstmal um acht Heim
@@ -42,12 +42,12 @@ Yeah, ich feier Mensatime am Strand
 Ich kann's kaum erwarten, ich bin schon auf Mensatime gespannt
 
 Es ist Mensatime, es ist Mensatime
-Es ist Mensatime, ich lad ein paar Bitches ein
-Ich lad ein paar Bitches ein, fick sie unter Mistenzweig
+Es ist Mensatime, ich lad ein paar Schnitzel ein
+Ich lad ein paar Schnitzel ein, schieb mir ein paar Pommes rein
 Es ist Mensa, es ist Mensa, Es ist Mensatime
 Es ist Mensatime, es ist Mensatime
-Es ist Mensatime, ich lad ein paar Bitches ein
-Ich lad ein paar Bitches ein, fick sie unter Mistenzweig
+Es ist Mensatime, ich lad ein paar Schnitzel ein
+Ich lad ein paar Schnitzel ein, schieb mir ein paar Pommes rein
 Es ist Mensa, es ist Mensa, Es ist Mensatime
 
 Es ist Mensatime, Mensazeit, frohes Fest
@@ -59,21 +59,21 @@ Du willst auch gerne so 'ne coole Kleidung haben
 Das ist auch okay, schreib doch eine Wunschliste
 Ich hab Swag Homie, triff mich vor der Punschhütte
 Mr. Moneyboy, Merry Merry Mensa
-Und am Mensabaum, very sexy Bitches
+Und am Mensabaum, very sexy Schnitzel
 Schöne Ladies in heißem Dessous
 Mr. Moneyboy, ja ich finde Mensatime cool
 Und ich spritz euch an, an mit meinem Mensa-Swag
-Bitches stehen auf Stöckelschuhe und Designerbags
+Schnitzel stehen auf Stöckelschuhe und Designerbags
 Darum kauf ich ihnen Jimmy Choo's, Loui' Stuff
 Und zum drüberstreuen, eine nice Gucci Clutch
 
 Es ist Mensatime, es ist Mensatime
-Es ist Mensatime, ich lad ein paar Bitches ein
-Ich lad ein paar Bitches ein, fick sie unter Mistenzweig
+Es ist Mensatime, ich lad ein paar Schnitzel ein
+Ich lad ein paar Schnitzel ein, schieb mir ein paar Pommes rein
 Es ist Mensa, es ist Mensa, Es ist Mensatime
 Es ist Mensatime, es ist Mensatime
-Es ist Mensatime, ich lad ein paar Bitches ein
-Ich lad ein paar Bitches ein, fick sie unter Mistenzweig
+Es ist Mensatime, ich lad ein paar Schnitzel ein
+Ich lad ein paar Schnitzel ein, schieb mir ein paar Pommes rein
 Es ist Mensa, es ist Mensa, Es ist Mensatime
       </pre>
   </div>
