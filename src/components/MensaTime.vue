@@ -7,12 +7,28 @@ if(!AutoRedirect()) {
   SaveSettings(setts);
 }
 
-const audio = new Audio('/audio/mensatime.mp3');
-audio.play().finally(() => {
-  const setts = LoadSettings();
-  setts.playingMensatime = false;
-  SaveSettings(setts);
-});
+// const audio = new Audio('/audio/mensatime.mp3');
+// audio.play().finally(() => {
+//   const setts = LoadSettings();
+//   setts.playingMensatime = false;
+//   SaveSettings(setts);
+// });
+
+function showIfValid(date: Date) {
+  const now = new Date();
+  if(now.
+}
+
+function subscribe() {
+  const audio = new Audio('/audio/mensatime.mp3');
+  audio.play().finally(() => {
+    const setts = LoadSettings();
+    setts.mensaTimeStart = new Date();
+    SaveSettings(setts);
+
+
+  });
+}
 
 </script>
 
@@ -22,8 +38,9 @@ audio.play().finally(() => {
     <iframe src="https://stwno.de/infomax/daten-extern/html/speiseplaene.php?einrichtung=HS-R-tag" title="Mensaplan"/>
     <br>
     <br>
-    <h2>Lyrics</h2>
-    <pre>
+    <button onclick="subscribe">Subscribe to Mensaplan</button>
+    <h2 class="lyrics" hidden>Lyrics</h2>
+    <pre class="lyrics" hidden>
 Money Boy Swag, das ist Money Boy Rap
 Es ist Mensatime und es wird ein Money Boy Fest
 Und ich cruise durch die Town in meinem Maybach denn

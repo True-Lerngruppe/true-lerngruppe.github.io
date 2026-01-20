@@ -6,11 +6,11 @@ const SETTINGS_KEY = "settings";
 // if any new persistent settings are needed,
 // they are to be added to this class
 type Settings = {
-  playingMensatime: boolean
+  mensaTimeStart: Date
 };
 
 const defaultSettings: Settings = {
-  playingMensatime: false,
+  mensaTimeStart: new Date(0),
 };
 
 // the current settings
@@ -47,10 +47,10 @@ export function AutoRedirect(): boolean {
   let redirected = false;
 
   // redirect to mensatime
-  if (settings.playingMensatime) {
-    router.replace('/mensatime');
-    redirected = true;
-  }
+  // if (settings.playingMensatime) {
+  //   router.replace('/mensatime');
+  //   redirected = true;
+  // }
 
   return redirected;
 }
