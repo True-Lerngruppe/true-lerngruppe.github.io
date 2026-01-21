@@ -25,7 +25,6 @@ function showIfValid(date: string | Date) {
   date = new Date(date);
 
   // if longer than 7 days
-  console.log(date, now);
   if(now.getTime() - date.getTime() > 6.048e+8) {
     showMensaplan.value = false;
     mensaTimeLeft.value = 'Mensatime is over!';
@@ -36,13 +35,16 @@ function showIfValid(date: string | Date) {
 }
 
 function subscribe() {
-  // const audio = new Audio('/audio/mensatime.mp3');
-  // audio.play().finally(() => {
+  const audio = new Audio('/audio/mensatime.mp3');
+
+  audio.addEventListener('ended', () => {
     const setts = LoadSettings();
     setts.mensaTimeStart = new Date();
     SaveSettings(setts);
     showIfValid(setts.mensaTimeStart);
-  // });
+  });
+
+  audio.play();
 }
 
 onMounted(() => {
@@ -59,7 +61,7 @@ onMounted(() => {
     <iframe v-show="showMensaplan" src="https://stwno.de/infomax/daten-extern/html/speiseplaene.php?einrichtung=HS-R-tag" title="Mensaplan"/>
     <br>
     <br>
-    <button @click="subscribe()">Subscribe to Mensaplan</button>
+    <button @click="subscribe()" v-show="!showMensaplan">Subscribe to Mensaplan</button>
     <h2 v-show="showMensaplan">Lyrics</h2>
     <pre v-show="showMensaplan">
 Money Boy Swag, das ist Money Boy Rap
