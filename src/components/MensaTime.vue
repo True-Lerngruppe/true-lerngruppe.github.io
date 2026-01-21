@@ -1,11 +1,15 @@
 <script setup lang="ts">
-import { LoadSettings, SaveSettings, AutoRedirect } from '../settings.ts';
+import { LoadSettings, SaveSettings } from '../settings.ts';
+import { onMounted, ref } from 'vue';
 
-if(!AutoRedirect()) {
-  const setts = LoadSettings();
-  setts.playingMensatime = true
-  SaveSettings(setts);
-}
+const showMensaplan = ref(false);
+const mensaTimeLeft = ref('Mensa Time is always!');
+
+// if(!AutoRedirect()) {
+//   const setts = LoadSettings();
+//   setts.playingMensatime = true
+//   SaveSettings(setts);
+// }
 
 // const audio = new Audio('/audio/mensatime.mp3');
 // audio.play().finally(() => {
@@ -14,33 +18,50 @@ if(!AutoRedirect()) {
 //   SaveSettings(setts);
 // });
 
-function showIfValid(date: Date) {
+function showIfValid(date: string | Date) {
   const now = new Date();
-  if(now.
+
+  // because date can be string or Date
+  date = new Date(date);
+
+  // if longer than 7 days
+  console.log(date, now);
+  if(now.getTime() - date.getTime() > 6.048e+8) {
+    showMensaplan.value = false;
+    mensaTimeLeft.value = 'Mensatime is over!';
+  } else {
+    showMensaplan.value = true;
+    mensaTimeLeft.value = 'Mensatime left: ' + Math.ceil((7 - ((now.getTime() - date.getTime()) / 8.64e+7))) + ' days';
+  }
 }
 
 function subscribe() {
-  const audio = new Audio('/audio/mensatime.mp3');
-  audio.play().finally(() => {
+  // const audio = new Audio('/audio/mensatime.mp3');
+  // audio.play().finally(() => {
     const setts = LoadSettings();
     setts.mensaTimeStart = new Date();
     SaveSettings(setts);
-
-
-  });
+    showIfValid(setts.mensaTimeStart);
+  // });
 }
+
+onMounted(() => {
+  const setts = LoadSettings();
+  showIfValid(setts.mensaTimeStart);
+});
 
 </script>
 
 <template>
   <div class="container">
     <h1>It's Mensatime!</h1>
-    <iframe src="https://stwno.de/infomax/daten-extern/html/speiseplaene.php?einrichtung=HS-R-tag" title="Mensaplan"/>
+    <p>{{ mensaTimeLeft }}</p>
+    <iframe v-show="showMensaplan" src="https://stwno.de/infomax/daten-extern/html/speiseplaene.php?einrichtung=HS-R-tag" title="Mensaplan"/>
     <br>
     <br>
-    <button onclick="subscribe">Subscribe to Mensaplan</button>
-    <h2 class="lyrics" hidden>Lyrics</h2>
-    <pre class="lyrics" hidden>
+    <button @click="subscribe()">Subscribe to Mensaplan</button>
+    <h2 v-show="showMensaplan">Lyrics</h2>
+    <pre v-show="showMensaplan">
 Money Boy Swag, das ist Money Boy Rap
 Es ist Mensatime und es wird ein Money Boy Fest
 Und ich cruise durch die Town in meinem Maybach denn
