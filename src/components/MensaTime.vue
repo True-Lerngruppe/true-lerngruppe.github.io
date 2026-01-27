@@ -3,6 +3,7 @@ import { LoadSettings, SaveSettings } from '../settings.ts';
 import { onMounted, ref } from 'vue';
 
 const showMensaplan = ref(false);
+const currentlyPlaying = ref(false);
 const mensaTimeLeft = ref('Mensa Time is always!');
 
 // if(!AutoRedirect()) {
@@ -42,9 +43,12 @@ function subscribe() {
     setts.mensaTimeStart = new Date();
     SaveSettings(setts);
     showIfValid(setts.mensaTimeStart);
+    currentlyPlaying.value = false;
   });
 
-  audio.play();
+  audio.play().then(() => {
+    currentlyPlaying.value = true;
+  });
 }
 
 onMounted(() => {
@@ -62,9 +66,9 @@ onMounted(() => {
       src="https://stwno.de/infomax/daten-extern/html/speiseplaene.php?einrichtung=HS-R-tag" title="Mensaplan" />
     <br>
     <br>
-    <button @click="subscribe()" v-show="!showMensaplan">Subscribe to Mensaplan</button>
-    <h2 v-show="showMensaplan">Lyrics</h2>
-    <pre v-show="showMensaplan">
+    <button @click="subscribe()" v-show="!(showMensaplan || currentlyPlaying)">Subscribe!</button>
+    <h1 v-show="currentlyPlaying || showMensaplan">Lyrics</h1>
+    <pre v-show="currentlyPlaying || showMensaplan">
       Money Boy Swag, das ist Money Boy Rap
       Es ist Mensatime und es wird ein Money Boy Fest
       Und ich cruise durch die Town in meinem Maybach denn
@@ -127,11 +131,36 @@ onMounted(() => {
   padding: 0 20px;
 }
 
+h1,
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 iframe {
   height: 50vh;
   width: 50vw;
   display: block;
   border-style: none;
+}
+
+button {
+  color: white;
+  font-size: 1.5em;
+  padding: 0.25em 0.5em;
+  background-color: #f90707;
+  border-radius: 5px;
+  border-color: transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:hover {
+  background-color: #c10505;
+  cursor: pointer;
 }
 
 @media(max-width: 768px) {
