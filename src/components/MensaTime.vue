@@ -25,7 +25,7 @@ function showIfValid(date: string | Date) {
   date = new Date(date);
 
   // if longer than 7 days
-  if(now.getTime() - date.getTime() > 6.048e+8) {
+  if (now.getTime() - date.getTime() > 6.048e+8) {
     showMensaplan.value = false;
     mensaTimeLeft.value = 'Mensatime is over!';
   } else {
@@ -58,69 +58,69 @@ onMounted(() => {
   <div class="container">
     <h1>It's Mensatime!</h1>
     <p>{{ mensaTimeLeft }}</p>
-    <iframe v-show="showMensaplan" src="https://stwno.de/infomax/daten-extern/html/speiseplaene.php?einrichtung=HS-R-tag" title="Mensaplan"/>
+    <iframe v-show="showMensaplan"
+      src="https://stwno.de/infomax/daten-extern/html/speiseplaene.php?einrichtung=HS-R-tag" title="Mensaplan" />
     <br>
     <br>
     <button @click="subscribe()" v-show="!showMensaplan">Subscribe to Mensaplan</button>
     <h2 v-show="showMensaplan">Lyrics</h2>
     <pre v-show="showMensaplan">
-Money Boy Swag, das ist Money Boy Rap
-Es ist Mensatime und es wird ein Money Boy Fest
-Und ich cruise durch die Town in meinem Maybach denn
-Es dauert nicht mehr lang und schon ist es Mensatime
-Yeah, triff mich in der Stadt, Homie, ja ich gebe Geld aus
-Guck mal wie ich meiner Lady einen schönen Held kauf'
-Rotfuchs, Silberfuchs, kuschelweiches Fell
-Und danach fick ich kurz mit einer Nutte im Hotel
-Yeah, PRPS, Schnitzel finden mеine Rosen fresh
-Ich hab dеn Mensa Swag, grüner Schal, rote Cap
-Es ist Mensatime, Party jede Nacht, Slime
-Und zwar die ganze Nacht, wir gehen erstmal um acht Heim
-Happy Holidays, ich flieg nach Hawaii, man
-Zu Silvester geht es weiter, dann nach Thailand
-Yeah, ich feier Mensatime am Strand
-Ich kann's kaum erwarten, ich bin schon auf Mensatime gespannt
+      Money Boy Swag, das ist Money Boy Rap
+      Es ist Mensatime und es wird ein Money Boy Fest
+      Und ich cruise durch die Town in meinem Maybach denn
+      Es dauert nicht mehr lang und schon ist es Mensatime
+      Yeah, triff mich in der Stadt, Homie, ja ich gebe Geld aus
+      Guck mal wie ich meiner Lady einen schönen Held kauf'
+      Rotfuchs, Silberfuchs, kuschelweiches Fell
+      Und danach fick ich kurz mit einer Nutte im Hotel
+      Yeah, PRPS, Schnitzel finden mеine Rosen fresh
+      Ich hab dеn Mensa Swag, grüner Schal, rote Cap
+      Es ist Mensatime, Party jede Nacht, Slime
+      Und zwar die ganze Nacht, wir gehen erstmal um acht Heim
+      Happy Holidays, ich flieg nach Hawaii, man
+      Zu Silvester geht es weiter, dann nach Thailand
+      Yeah, ich feier Mensatime am Strand
+      Ich kann's kaum erwarten, ich bin schon auf Mensatime gespannt
 
-Es ist Mensatime, es ist Mensatime
-Es ist Mensatime, ich lad ein paar Schnitzel ein
-Ich lad ein paar Schnitzel ein, schieb mir ein paar Pommes rein
-Es ist Mensa, es ist Mensa, Es ist Mensatime
-Es ist Mensatime, es ist Mensatime
-Es ist Mensatime, ich lad ein paar Schnitzel ein
-Ich lad ein paar Schnitzel ein, schieb mir ein paar Pommes rein
-Es ist Mensa, es ist Mensa, Es ist Mensatime
+      Es ist Mensatime, es ist Mensatime
+      Es ist Mensatime, ich lad ein paar Schnitzel ein
+      Ich lad ein paar Schnitzel ein, schieb mir ein paar Pommes rein
+      Es ist Mensa, es ist Mensa, Es ist Mensatime
+      Es ist Mensatime, es ist Mensatime
+      Es ist Mensatime, ich lad ein paar Schnitzel ein
+      Ich lad ein paar Schnitzel ein, schieb mir ein paar Pommes rein
+      Es ist Mensa, es ist Mensa, Es ist Mensatime
 
-Es ist Mensatime, Mensazeit, frohes Fest
-Ich trage eine grüne Weste und ein rotes Cap
-Es ist Mensazeit, überall weißer Schnee
-Und ich ziehe eine Line, homie, live on stage
-Es ist Heiligabend, ich trage Designermarken
-Du willst auch gerne so 'ne coole Kleidung haben
-Das ist auch okay, schreib doch eine Wunschliste
-Ich hab Swag Homie, triff mich vor der Punschhütte
-Mr. Moneyboy, Merry Merry Mensa
-Und am Mensabaum, very sexy Schnitzel
-Schöne Ladies in heißem Dessous
-Mr. Moneyboy, ja ich finde Mensatime cool
-Und ich spritz euch an, an mit meinem Mensa-Swag
-Schnitzel stehen auf Stöckelschuhe und Designerbags
-Darum kauf ich ihnen Jimmy Choo's, Loui' Stuff
-Und zum drüberstreuen, eine nice Gucci Clutch
+      Es ist Mensatime, Mensazeit, frohes Fest
+      Ich trage eine grüne Weste und ein rotes Cap
+      Es ist Mensazeit, überall weißer Schnee
+      Und ich ziehe eine Line, homie, live on stage
+      Es ist Heiligabend, ich trage Designermarken
+      Du willst auch gerne so 'ne coole Kleidung haben
+      Das ist auch okay, schreib doch eine Wunschliste
+      Ich hab Swag Homie, triff mich vor der Punschhütte
+      Mr. Moneyboy, Merry Merry Mensa
+      Und am Mensabaum, very sexy Schnitzel
+      Schöne Ladies in heißem Dessous
+      Mr. Moneyboy, ja ich finde Mensatime cool
+      Und ich spritz euch an, an mit meinem Mensa-Swag
+      Schnitzel stehen auf Stöckelschuhe und Designerbags
+      Darum kauf ich ihnen Jimmy Choo's, Loui' Stuff
+      Und zum drüberstreuen, eine nice Gucci Clutch
 
-Es ist Mensatime, es ist Mensatime
-Es ist Mensatime, ich lad ein paar Schnitzel ein
-Ich lad ein paar Schnitzel ein, schieb mir ein paar Pommes rein
-Es ist Mensa, es ist Mensa, Es ist Mensatime
-Es ist Mensatime, es ist Mensatime
-Es ist Mensatime, ich lad ein paar Schnitzel ein
-Ich lad ein paar Schnitzel ein, schieb mir ein paar Pommes rein
-Es ist Mensa, es ist Mensa, Es ist Mensatime
-      </pre>
+      Es ist Mensatime, es ist Mensatime
+      Es ist Mensatime, ich lad ein paar Schnitzel ein
+      Ich lad ein paar Schnitzel ein, schieb mir ein paar Pommes rein
+      Es ist Mensa, es ist Mensa, Es ist Mensatime
+      Es ist Mensatime, es ist Mensatime
+      Es ist Mensatime, ich lad ein paar Schnitzel ein
+      Ich lad ein paar Schnitzel ein, schieb mir ein paar Pommes rein
+      Es ist Mensa, es ist Mensa, Es ist Mensatime
+    </pre>
   </div>
 </template>
 
 <style scoped>
-
 .container {
   margin-left: 30%;
   margin-right: 30%;
