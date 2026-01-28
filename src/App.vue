@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import BurgerMenu from './components/BurgerMenu.vue'
+import { AutoRedirect } from './settings.ts'
+AutoRedirect();
 </script>
 
 <template>
@@ -9,6 +11,7 @@ import BurgerMenu from './components/BurgerMenu.vue'
     <RouterLink to="/impressum">Impressum</RouterLink>
     <RouterLink to="/funny_something">Patricks lustige idee</RouterLink>
     <RouterLink to="/trippy">Go for a trip</RouterLink>
+    <RouterLink to="/Mensatime">Mensatime</RouterLink>
   </BurgerMenu>
 
   <main>

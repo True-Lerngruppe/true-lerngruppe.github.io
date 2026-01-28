@@ -9,6 +9,8 @@ const route = useRoute();
 const isMenuOpen = ref(false);
 
 function toggleMenu() {
+  if(!isMenuOpen.value) shuffleMenuItems();
+
   isMenuOpen.value = !isMenuOpen.value;
 }
 
